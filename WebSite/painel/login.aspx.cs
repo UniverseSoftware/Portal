@@ -32,9 +32,13 @@ public partial class painel_login : System.Web.UI.Page
             {
                 Response.Redirect("Default.aspx");//Quanto for Admin mandar para o gerenciamento da empresa.
             }
-            else
+            else if (usuario.TipoUsuario == 1)
             {
                 Response.Redirect("DefaultEmp.aspx");//Quando for Empresa mandar para gestão da empresa.
+            }
+            else
+            {
+                Response.Redirect("DefaultPes.aspx");//Quando for Pessoa mandar para para a pagina solicitando a instalação do app.
             }
         }
         else
