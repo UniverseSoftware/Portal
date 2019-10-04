@@ -12,7 +12,7 @@
 <body>
     <form id="form1" runat="server">
     <div id="geral">
-        <center><img src="../img/marca1.png" height="250" /></center>
+        <center><img src="../img/marca1.png" height="240" /></center>
         <fieldset>
             <font size="4"><b>Acesso ao Sistema Empresas</b></font>
             <div id="content_login">
