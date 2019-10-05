@@ -13,13 +13,11 @@
     <form id="form1" runat="server">
         <div id="geral">
             <div id="cabecalho">
-                <h1 id="logo">Painel de Empresa</h1>
+                <h1 id="logo">Painel da Pessoa</h1>
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href="meu_perfilemp.aspx">Meu Pefil</a></li>
-                    <li><a href="gerenciar_pedidos.aspx">Gerenciar Pedidos</a></li>
-                    <li><a href="gerenciar_servicos.aspx">Gerenciar Serviços</a></li>
+                    <li><a href="meu_perfilpes.aspx">Meu Pefil</a></li>
                     <li><a href="sair.aspx">Sair</a></li>
                 </ul>
             </div>

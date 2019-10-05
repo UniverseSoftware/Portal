@@ -14,7 +14,7 @@
     <div id="geral">
         <center><img src="../img/marca1.png" height="240" /></center>
         <fieldset>
-            <font size="4"><b>Acesso ao Sistema Empresas</b></font>
+            <font size="4"><b>Acesso ao Sistema</b></font>
             <div id="content_login">
                 <label>Usuário</label>
                 <asp:TextBox ID="txtUsuario" runat="server" />
