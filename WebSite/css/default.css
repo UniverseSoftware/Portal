@@ -18,7 +18,7 @@ body
 	height: 100%;
 }
 #cabecalho {
-    background-color: #A96134;
+    background-color: #fff;
     height: 150px;
     line-height: 150px;
 }
@@ -27,7 +27,7 @@ body
     padding: 0;
     margin: 0;
 }
-#cabecalho h1#logo
+#cabecalho h1 #logo
 {
     text-transform: uppercase;
 }
@@ -54,7 +54,7 @@ body
 }
     #menu ul li a:hover {
         color: #353535;
-        background: #E28249;
+        background: #85d0cc;
         text-decoration: underline;
     }
 #conteudo
@@ -67,7 +67,7 @@ body
 }
 #rodape {
     position: absolute;
-    background-color: #CF7B47;
+    background-color: #233a4a;
     width: 100%;
     bottom: 0;
     left: 0;

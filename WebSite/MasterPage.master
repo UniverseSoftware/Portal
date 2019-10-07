@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
         <div id="geral">
             <div id="cabecalho">
-                <h1 id="logo">Universe Software</h1>
+                <h1 id="logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="150" src="img/logo1.JPG" /></h1>
             </div>
             <div id="menu">
                 <%-- Aqui ficou o nosso MenuContro.ascx --%>
