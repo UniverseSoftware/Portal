@@ -34,7 +34,7 @@ public partial class painel_login : System.Web.UI.Page
             }
             else if (usuario.TipoUsuario == 1)
             {
-                Response.Redirect("DefaultEmp.aspx");//Quando for Empresa mandar para gestão da empresa.
+                Response.Redirect("DefaultEmp.aspx?id="+usuario.IdUsuario+"");//Quando for Empresa mandar para gestão da empresa.
             }
             else
             {

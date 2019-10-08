@@ -63,10 +63,10 @@ namespace WebSite.Business
             {
                 sqlString.AppendLine("WHERE 1 = 1");
 
-                //if (usuario.IdUsuario > 0)
-                //{
-                //    sqlString.AppendLine("AND  USUARIO.IDUSUARIO = " + usuario.IdUsuario + "");
-                //}
+                if (usuario.IdUsuario > 0)
+                {
+                    sqlString.AppendLine("AND  USUARIO.IDUSUARIO = " + usuario.IdUsuario + "");
+                }
 
                 if (!string.IsNullOrEmpty(usuario.UserUsuario) && usuario.UserUsuario.Length > 0)
                 {
@@ -82,10 +82,14 @@ namespace WebSite.Business
             IDataReader reader = connection.RetornaDados(sqlString.ToString());
 
             int idxId = reader.GetOrdinal("ID");
-            int idxNome = reader.GetOrdinal("USR");
-            int idxEmail = reader.GetOrdinal("EMAIL");
             int idxLogin = reader.GetOrdinal("USR");
             int idxSenha = reader.GetOrdinal("PASS");
+            int idxNome = reader.GetOrdinal("NOME");
+            int idxSnome = reader.GetOrdinal("SNOME");
+            int idxCGC = reader.GetOrdinal("CGC");
+            int idxEmail = reader.GetOrdinal("EMAIL");
+            int idxTel = reader.GetOrdinal("TEL");
+            int idxEnde = reader.GetOrdinal("ENDE");
             int idxAtivo = reader.GetOrdinal("STATUS");
             int idxTipo =   reader.GetOrdinal("TIPOUSUARIO");
 
@@ -93,10 +97,14 @@ namespace WebSite.Business
             {
                 Entities.Usuarios _Usuario = new Entities.Usuarios();
                 _Usuario.IdUsuario = reader.GetInt32(idxId);
-                _Usuario.NomeEP = reader.GetString(idxNome);
-                _Usuario.EmailEP = reader.GetString(idxEmail);
                 _Usuario.UserUsuario = reader.GetString(idxLogin);
                 _Usuario.PassUsuario = reader.GetString(idxSenha);
+                _Usuario.NomeEP = reader.GetString(idxNome);
+                _Usuario.SnomeEP = reader.GetString(idxSnome);
+                _Usuario.CGCEP = reader.GetString(idxCGC);
+                _Usuario.EmailEP = reader.GetString(idxEmail);
+                _Usuario.TelEP = reader.GetString(idxTel);
+                _Usuario.EndEP = reader.GetString(idxEnde);
                 _Usuario.StatusUsuario = reader.GetInt32(idxAtivo);
                 _Usuario.TipoUsuario = reader.GetInt32(idxTipo);
 
