@@ -35,10 +35,10 @@ public partial class painel_editar_usuario : System.Web.UI.Page
                 //chkAtivo.Checked = usuario.Ativo;
 
                 txtUserUsuario.Enabled = false;
-                //txtPassUsuario.Enabled = false;
-                //txtConfirmaPassUsuario.Enabled = false;
+                
             }
         }
+        
     }
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
