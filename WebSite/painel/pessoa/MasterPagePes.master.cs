@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class painel_MasterPagePes : System.Web.UI.MasterPage
+public partial class painel_pessoa_MasterPagePes : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

@@ -26,6 +26,7 @@
         <asp:CheckBox ID="chkAtivo" runat="server" Text="Ativo" /><br />
         <div class="command">
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" onclick="btnSalvar_Click" />
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" onclick="btnCancelar_Click" />
         </div>
     </div>
     <br />

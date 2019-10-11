@@ -25,7 +25,7 @@
             </asp:TemplateField>
             <asp:BoundField DataField="IdUsuario" HeaderText="Codigo" SortExpression="IdUsuario" />
             <asp:BoundField DataField="NomeEP" HeaderText="Nome" SortExpression="NomeEP" />
-            <asp:BoundField DataField="NomeEP" HeaderText="Sobrenome" SortExpression="NomeEP" />
+            <asp:BoundField DataField="SnomeEP" HeaderText="Sobrenome" SortExpression="NomeEP" />
             <asp:BoundField DataField="EmailEP" HeaderText="E-mail" SortExpression="EmailEP" />
             <asp:BoundField DataField="UserUsuario" HeaderText="Usuario" SortExpression="UserUsuario" />
             <asp:BoundField DataField="PassUsuario" HeaderText="Senha" SortExpression="PassUsuario" />
