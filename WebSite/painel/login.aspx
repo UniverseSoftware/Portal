@@ -21,7 +21,7 @@
                 <label>Senha</label>
                 <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" />
                 <br /><br />
-                <asp:Button ID="btnAutenticar" Text="Entrar" runat="server" onclick="btnAutenticar_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnCadastrar" Text="Cadastro" runat="server"/>
+                <asp:Button ID="btnAutenticar" Text="Entrar" runat="server" onclick="btnAutenticar_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnCadastrar" Text="Cadastro" runat="server" onclick="btnCadastrar_Click"/>
                 <br />
                 <p> <a href="http://localhost:6783/painel/login.aspx" target="_blank"><font size="1">Esqueci minha senha</font></a></p>
             </div>

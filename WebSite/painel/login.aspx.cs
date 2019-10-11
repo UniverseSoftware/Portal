@@ -46,4 +46,8 @@ public partial class painel_login : System.Web.UI.Page
             ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "msgbox", "alert('" + usuariosBO.MensagemErro + "')", true);
         }
     }
-}
+    protected void btnCadastrar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("cadastro.aspx");
+    }
+    }

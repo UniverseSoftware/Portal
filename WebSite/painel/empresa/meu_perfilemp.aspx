@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/painel/MasterPageEmp.master" AutoEventWireup="true" CodeFile="meu_perfilemp.aspx.cs" Inherits="painel_meu_perfil" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/painel/empresa/MasterPageEmp.master" AutoEventWireup="true" CodeFile="meu_perfilemp.aspx.cs" Inherits="painel_meu_perfil" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="form">
