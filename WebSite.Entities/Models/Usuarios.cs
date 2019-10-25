@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebSite.Entities
+namespace WebSite.Entities.Models
 {
     public class Usuarios
     {

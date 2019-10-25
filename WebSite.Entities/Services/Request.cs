@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
-namespace WebSite.App_Code.Services
+namespace WebSite.Entities.Services
 {
     public class Request : IRequest
     {

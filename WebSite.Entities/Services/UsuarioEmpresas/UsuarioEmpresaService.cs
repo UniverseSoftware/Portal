@@ -1,11 +1,10 @@
-﻿using WebSite.App_Code.Models;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using WebSites.App_Code.Services.UsuarioEmpresas;
+using WebSite.Entities.Models;
 
-namespace WebSite.App_Code.Services.UsuarioEmpresas
+namespace WebSite.Entities.Services.UsuarioEmpresas
 {
-    public class UsuarioEmpresaService : IUsuarioEmpresaService
+    public class UsuarioEmpresaService
     {
         private readonly IRequest _request;
         private const string ApiUrlBase = "http://universesoftware2019.somee.com/api/CadUsuarios";
@@ -30,26 +29,26 @@ namespace WebSite.App_Code.Services.UsuarioEmpresas
             return usuarioEmpresa;
         }
 
-        public async Task<UsuarioEmpresa> PostUsuarioEmpresaAsync(UsuarioEmpresa c)
+        public async Task<UsuarioEmpresa> PostUsuarioEmpresaAsync(UsuarioEmpresa e)
         {
-            if (c.IdUsuario == 0)
+            if (e.IdUsuario == 0)
             {
                 //Errado
                 //string urlComplementar = string.Format("/I/{0}", c.TipoUsuario);
                 //return await _request.PostAsync(ApiUrlBase, c);
 
-                string urlComplementar = string.Format("/I/{0}", c.TipoUsuario);
-                return await _request.PostAsync(ApiUrlBase + urlComplementar, c);
+                string urlComplementar = string.Format("/I/{0}", e.TipoUsuario);
+                return await _request.PostAsync(ApiUrlBase + urlComplementar, e);
 
             }
             else
-                return await _request.PutAsync(ApiUrlBase, c);
+                return await _request.PutAsync(ApiUrlBase, e);
         }
 
-        public async Task<UsuarioEmpresa> PutUsuarioEmpresaAsync(UsuarioEmpresa c)
+        public async Task<UsuarioEmpresa> PutUsuarioPessoaAsync(UsuarioEmpresa e)
         {
-            string urlComplementar = string.Format("/U/{0}", c.IdUsuario);
-            var result = await _request.PutAsync(ApiUrlBase + urlComplementar, c);
+            string urlComplementar = string.Format("/U/{0}", e.IdUsuario);
+            var result = await _request.PutAsync(ApiUrlBase + urlComplementar, e);
             return result;
         }
     }

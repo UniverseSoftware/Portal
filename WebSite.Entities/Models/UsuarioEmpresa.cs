@@ -1,4 +1,4 @@
-﻿namespace WebSite.App_Code.Models
+﻿namespace WebSite.Entities.Models
 {
     public class UsuarioEmpresa
     {

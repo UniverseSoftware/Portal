@@ -71,7 +71,7 @@ public partial class painel_meu_perfil : System.Web.UI.Page
 
         if (Salvou)
         {
-            Response.Redirect("meu_perfilemp.aspx?id=");
+            Response.Redirect("meu_perfilemp.aspx");
         }
     }
 }

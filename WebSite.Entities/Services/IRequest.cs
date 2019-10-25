@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WebSite.App_Code.Services
+namespace WebSite.Entities.Services
 {
     public interface IRequest
     {

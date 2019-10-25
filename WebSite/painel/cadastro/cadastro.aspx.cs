@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using UsuariosBO = WebSite.Business.Usuarios;
 using Usuarios = WebSite.Entities.Usuarios;
 
@@ -65,11 +61,11 @@ public partial class painel_cadastro : System.Web.UI.Page
 
         if (Salvou)
         {
-            Response.Redirect("login.aspx");
+            Response.Redirect("~/painel/login.aspx");
         }
     }
     protected void btnCancelar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("login.aspx");
+        Response.Redirect("~/painel/login.aspx");
     }
 }
