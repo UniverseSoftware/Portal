@@ -14,6 +14,35 @@
         public string TelEP { get; set; }
         public string EmailEP { get; set; }
         public string EndEP { get; set; }
+        public UsuarioEmpresa()
+        {
 
+        }
+
+        public UsuarioEmpresa(int IdUsuario)
+        {
+            this.IdUsuario = IdUsuario;
+        }
+
+        public UsuarioEmpresa(string Login)
+        {
+            this.UserUsuario = Login;
+        }
+
+        public UsuarioEmpresa(string Login, string Senha)
+        {
+            this.UserUsuario = Login;
+            this.PassUsuario = Senha;
+        }
+
+        public UsuarioEmpresa(int IdUsuario, string Nome, string Email, string Login, string Senha)
+        {
+            this.IdUsuario = IdUsuario;
+            this.NomeEP = Nome;
+            this.EmailEP = Email;
+            this.UserUsuario = Login;
+            this.PassUsuario = Senha;
+
+        }
     }
 }

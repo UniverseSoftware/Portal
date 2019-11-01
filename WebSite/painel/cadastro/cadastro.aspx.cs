@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using UsuariosBO = WebSite.Business.Usuarios;
-using Usuarios = WebSite.Entities.Usuarios;
+using Usuarios = WebSite.Entities.Models.UsuarioEmpresa;
 
 public partial class painel_cadastro : System.Web.UI.Page
 {

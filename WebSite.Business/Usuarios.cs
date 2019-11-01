@@ -19,10 +19,10 @@ namespace WebSite.Business
             this.MensagemErro = string.Empty;
         }
 
-        public Entities.Usuarios AutenticaUsuario(string Login, string Senha)
+        public Entities.Models.UsuarioEmpresa AutenticaUsuario(string Login, string Senha)
         {
-            Entities.Usuarios[] usuarios = ListaUsuarios(new Entities.Usuarios(Login, Senha));
-            Entities.Usuarios usuario = usuarios.FirstOrDefault();
+            Entities.Models.UsuarioEmpresa[] usuarios = ListaUsuarios(new Entities.Models.UsuarioEmpresa(Login, Senha));
+            Entities.Models.UsuarioEmpresa usuario = usuarios.FirstOrDefault();
 
             if (usuario == null)
             {
@@ -35,22 +35,22 @@ namespace WebSite.Business
 
         public bool LoginCadastrado(string Login)
         {
-            Entities.Usuarios[] usuarios = ListaUsuarios(new Entities.Usuarios(Login));
-            Entities.Usuarios usuario = usuarios.FirstOrDefault();
+            Entities.Models.UsuarioEmpresa[] usuarios = ListaUsuarios(new Entities.Models.UsuarioEmpresa(Login));
+            Entities.Models.UsuarioEmpresa usuario = usuarios.FirstOrDefault();
 
             bool existe = usuario != null && usuario.IdUsuario > 0;
 
             return existe;
         }
 
-        public Entities.Usuarios[] ListaUsuarios()
+        public Entities.Models.UsuarioEmpresa[] ListaUsuarios()
         {
             return ListaUsuarios(null);
         }
 
-        public Entities.Usuarios[] ListaUsuarios(Entities.Usuarios usuario)
+        public Entities.Models.UsuarioEmpresa[] ListaUsuarios(Entities.Models.UsuarioEmpresa usuario)
         {
-            List<Entities.Usuarios> lstUsuarios = new List<Entities.Usuarios>();
+            List<Entities.Models.UsuarioEmpresa> lstUsuarios = new List<Entities.Models.UsuarioEmpresa>();
 
             Data.Connection connection = new Data.Connection(this.ConnectionString);
             connection.AbrirConexao();
@@ -95,7 +95,7 @@ namespace WebSite.Business
 
             while (reader.Read())
             {
-                Entities.Usuarios _Usuario = new Entities.Usuarios();
+                Entities.Models.UsuarioEmpresa _Usuario = new Entities.Models.UsuarioEmpresa();
                 _Usuario.IdUsuario = reader.GetInt32(idxId);
                 _Usuario.UserUsuario = reader.GetString(idxLogin);
                 _Usuario.PassUsuario = reader.GetString(idxSenha);
@@ -116,7 +116,7 @@ namespace WebSite.Business
             return lstUsuarios.ToArray();
         }
 
-        public bool SalvaUsuario(Entities.Usuarios usuario)
+        public bool SalvaUsuario(Entities.Models.UsuarioEmpresa usuario)
         {
             bool salvou = false;
 
@@ -161,10 +161,10 @@ namespace WebSite.Business
 
         public bool SalvaUsuario(int IdUsuario, string Nome, string Email, string Login, string Senha)
         {
-            return SalvaUsuario(new Entities.Usuarios(IdUsuario, Nome, Email, Login, Senha));
+            return SalvaUsuario(new Entities.Models.UsuarioEmpresa(IdUsuario, Nome, Email, Login, Senha));
         }
 
-        public bool ExcluiUsuario(Entities.Usuarios usuario)
+        public bool ExcluiUsuario(Entities.Models.UsuarioEmpresa usuario)
         {
             bool salvou = false;
 
@@ -187,7 +187,7 @@ namespace WebSite.Business
 
         public bool ExcluiUsuario(int IdUsuario)
         {
-            return ExcluiUsuario(new Entities.Usuarios(IdUsuario));
+            return ExcluiUsuario(new Entities.Models.UsuarioEmpresa(IdUsuario));
         }
     }
 }
